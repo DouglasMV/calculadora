@@ -4,6 +4,6 @@ const root = document.getElementById('root')
 
 root.append(calculadora)
 
-window.onload = function () {
-  document.querySelector('.operacaoAtual').focus();
-};
+// window.onload = function () {
+//   document.querySelector('.operacaoAtual').focus();
+// };

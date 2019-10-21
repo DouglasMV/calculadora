@@ -20,6 +20,6 @@ export const apertouTecla = event => {
       escreverNaTela('²')
       break
     default:
-      escreverNaTela(event.target.textContent)
+      escreverNaTela(operacao)
   }
 }
