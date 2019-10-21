@@ -4,6 +4,7 @@ import { teclas } from './teclas.js'
 
 export const calculadora = document.createElement('div')
 
+calculadora.classList.add('calculadora')
 calculadora.append(tela)
 
 teclas.forEach(tecla => {
