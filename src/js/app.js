@@ -1,4 +1,4 @@
-import { calculadora } from './calculadora.js'
+import { calculadora } from './view/calculadora.js'
 
 const root = document.getElementById('root')
 

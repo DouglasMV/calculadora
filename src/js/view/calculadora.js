@@ -7,6 +7,6 @@ export const calculadora = document.createElement('div')
 calculadora.append(tela)
 
 teclas.forEach(tecla => {
-  const teclaCriada = criarTecla(tecla.valor, tecla.classe)
+  const teclaCriada = criarTecla(tecla)
   calculadora.append(teclaCriada)
 })
