@@ -1,3 +1,4 @@
-export const escreverNaTela = (valor) => {
-  alert(valor)
+export const escreverNaTela = valor => {
+  const operacaoAtual = document.querySelector('.operacaoAtual')
+  operacaoAtual.textContent += valor
 }
