@@ -3,6 +3,7 @@ import { stringEval } from './stringEval.js'
 
 export const igual = () => {
   const operacaoAtual = document.querySelector('.operacaoAtual')
+  const operacaoAnterior = document.querySelector('.operacaoAnterior')
   const expressaoInvalida = document.querySelector('.expressaoInvalida')
   operacaoAtual.setAttribute('data-resultado', 'true')
   const operacao = operacaoAtual.value
@@ -14,6 +15,7 @@ export const igual = () => {
       const evalThisString = stringEval(operacao)
       const resultado = eval(evalThisString)
       operacaoAtual.value = resultado
+      operacaoAnterior.textContent = operacao
     } catch {
       expressaoInvalida.classList.add('displayBlock')
       expressaoInvalida.classList.remove('displayNone')
