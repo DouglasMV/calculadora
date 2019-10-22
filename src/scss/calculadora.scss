@@ -1,6 +1,6 @@
 .calculadora {
   display: grid;
-  grid-template: minmax(50px, 1fr) repeat(4, 50px) / repeat(6, 60px);
+  grid-template: minmax(50px, 1fr) repeat(4, 50px) / repeat(6, 50px);
   box-shadow: 0 0 3px black;
   border: 1px solid black;
 }

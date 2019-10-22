@@ -37,4 +37,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./tela.js":"UIlM","./criarTecla.js":"X0IH","./teclas.js":"DnKn"}],"cWTO":[function(require,module,exports) {
 "use strict";var e=require("./view/calculadora.js"),a=document.getElementById("root");a.append(e.calculadora);
 },{"./view/calculadora.js":"o3rh"}]},{},["cWTO"], null)
-//# sourceMappingURL=/app.192787cd.js.map
+//# sourceMappingURL=app.192787cd.js.map
