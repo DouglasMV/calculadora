@@ -13,12 +13,15 @@ operacaoAtual.addEventListener('keydown', event => {
       case 'Enter':
       case 'NumpadEnter':
         igual()
+        break
       case 'NumpadMultiply':
         event.preventDefault()
-        operacaoAtual.textContent += '×'
+        operacaoAtual.value += '×'
+        break
       case 'NumpadDivide':
         event.preventDefault()
-        operacaoAtual.textContent += '÷'
+        operacaoAtual.value += '÷'
+        break
     }
   } else {
     event.preventDefault()
