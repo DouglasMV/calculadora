@@ -16,7 +16,13 @@ export const stringEval = string => {
     }
     if (element === '√') {
       raizes.push(index)
-      return 'Math.sqrt('
+      if (
+        index === 0 ||
+        ['÷', '×', '-', '+', '(', '√'].includes(tempArr[index - 1])
+      ) {
+        return 'Math.sqrt('
+      }
+      return '*Math.sqrt('
     }
     return element
   })

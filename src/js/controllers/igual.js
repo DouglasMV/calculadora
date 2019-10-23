@@ -1,12 +1,13 @@
 import { validar } from './validar.js'
 import { stringEval } from './stringEval.js'
+import { focus } from './focus.js'
 
 export const igual = () => {
   const operacaoAtual = document.querySelector('.operacaoAtual')
   const operacaoAnterior = document.querySelector('.operacaoAnterior')
   const expressaoInvalida = document.querySelector('.expressaoInvalida')
   operacaoAtual.setAttribute('data-resultado', 'true')
-  const operacao = operacaoAtual.value
+  const operacao = operacaoAtual.textContent
   if (!validar(operacao)) {
     expressaoInvalida.classList.add('displayBlock')
     expressaoInvalida.classList.remove('displayNone')
@@ -14,12 +15,12 @@ export const igual = () => {
     try {
       const evalThisString = stringEval(operacao)
       const resultado = eval(evalThisString)
-      operacaoAtual.value = resultado
+      operacaoAtual.textContent = resultado
       operacaoAnterior.textContent = operacao
     } catch {
       expressaoInvalida.classList.add('displayBlock')
       expressaoInvalida.classList.remove('displayNone')
     }
-    document.querySelector('.operacaoAtual').focus()
+    focus()
   }
 }

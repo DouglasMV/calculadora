@@ -1,3 +1,5 @@
+import { focus } from './focus.js'
+
 export const escreverNaTela = valor => {
   const operacaoAtual = document.querySelector('.operacaoAtual')
 
@@ -8,7 +10,7 @@ export const escreverNaTela = valor => {
       !['+', '-', '×', '÷', '²', '%'].includes(valor) ||
       expressaoInvalida.classList.contains('displayBlock')
     ) {
-      operacaoAtual.value = ''
+      operacaoAtual.textContent = ''
     }
 
     operacaoAtual.setAttribute('data-resultado', 'false')
@@ -16,6 +18,6 @@ export const escreverNaTela = valor => {
     expressaoInvalida.classList.remove('displayBlock')
     expressaoInvalida.classList.add('displayNone')
   }
-  document.querySelector('.operacaoAtual').focus()
-  operacaoAtual.value += valor
+  operacaoAtual.textContent += valor
+  focus()
 }
