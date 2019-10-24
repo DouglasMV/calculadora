@@ -29,7 +29,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./focus.js":"YbTU"}],"JCm1":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.deletar=void 0;var e=require("./focus.js"),t=function(){var t=document.querySelector(".operacaoAtual"),o=t.textContent;t.textContent=o.substr(0,o.length-1);var r=document.querySelector(".expressaoInvalida");r.classList.remove("displayBlock"),r.classList.add("displayNone"),(0,e.focus)()};exports.deletar=t;
 },{"./focus.js":"YbTU"}],"GDpE":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.apertouTecla=void 0;var e=require("./escreverNaTela.js"),r=require("./igual.js"),a=require("./limparTela.js"),t=require("./deletar.js"),l=function(l){l.preventDefault;var s=l.target.textContent;switch(s){case"=":(0,r.igual)();break;case"C":(0,a.limparTela)();break;case"del":(0,t.deletar)();break;case"x²":(0,e.escreverNaTela)("²");break;default:(0,e.escreverNaTela)(s)}};exports.apertouTecla=l;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.apertouTecla=void 0;var e=require("./escreverNaTela.js"),r=require("./igual.js"),a=require("./limparTela.js"),t=require("./deletar.js"),l=function(l){l.target.blur();var s=l.target.textContent;switch(s){case"=":(0,r.igual)();break;case"C":(0,a.limparTela)();break;case"del":(0,t.deletar)();break;case"x²":(0,e.escreverNaTela)("²");break;default:(0,e.escreverNaTela)(s)}};exports.apertouTecla=l;
 },{"./escreverNaTela.js":"uvvN","./igual.js":"WhcT","./limparTela.js":"DZYS","./deletar.js":"JCm1"}],"X0IH":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.criarTecla=void 0;var e=require("../controllers/apertouTecla.js"),t=function(t){var r=document.createElement("button");return r.textContent=t,r.classList.add("tecla"),r.addEventListener("click",e.apertouTecla),"="===r.textContent&&r.classList.add("igual"),r};exports.criarTecla=t;
 },{"../controllers/apertouTecla.js":"GDpE"}],"DnKn":[function(require,module,exports) {
@@ -39,4 +39,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./tela.js":"UIlM","./criarTecla.js":"X0IH","./teclas.js":"DnKn"}],"cWTO":[function(require,module,exports) {
 "use strict";var e=require("./view/calculadora.js"),o=require("./controllers/focus.js"),r=document.getElementById("root");r.append(e.calculadora),window.onload=function(){document.querySelector(".operacaoAtual").focus()};
 },{"./view/calculadora.js":"o3rh","./controllers/focus.js":"YbTU"}]},{},["cWTO"], null)
-//# sourceMappingURL=app.53c3f9eb.js.map
+//# sourceMappingURL=app.6d0769a6.js.map
