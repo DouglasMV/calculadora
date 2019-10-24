@@ -1,4 +1,5 @@
 import { calculadora } from './view/calculadora.js'
+import { focus } from './controllers/focus.js'
 
 const root = document.getElementById('root')
 

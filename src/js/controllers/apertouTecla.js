@@ -4,6 +4,7 @@ import { limparTela } from './limparTela.js'
 import { deletar } from './deletar.js'
 
 export const apertouTecla = event => {
+  event.preventDefault
   const operacao = event.target.textContent
 
   switch (operacao) {
