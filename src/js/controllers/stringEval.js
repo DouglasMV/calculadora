@@ -24,6 +24,14 @@ export const stringEval = string => {
       }
       return '*Math.sqrt('
     }
+    if (
+      element === '(' &&
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'].includes(
+        tempArr[index - 1]
+      )
+    ) {
+      return '*('
+    }
     return element
   })
 
